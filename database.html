@@ -13,23 +13,31 @@
     <title>Teeve - Database</title>
 </head>
 
+
 <body>
     <div class="dashboard-wrapper row m-0">
         <nav class="dashboard-nav d-none d-md-flex flex-column col-md-1 col-lg-2">
-            <a href="#"><span>Logo</span> <span class="d-none d-lg-inline">Dashboard</span></a>
-            <ul>
-                <li><a href="#"><span>Icon</span><span class="d-none d-lg-inline">Overview</span></a></li>
-                <li><a href="#"><span>Icon</span><span class="d-none d-lg-inline">Send Memo</span></a></li>
-                <li><a href="#"><span>Icon</span><span class="d-none d-lg-inline">Database</span></a></li>
-            </ul>
-            <div>
-                <a href="#"><span>icon</span> <span class="d-none d-lg-inline"> Settings</span></a>
-                <button class="d-none d-md-block d-lg-none">Carret</button>
+            <div class="position-fixed">
+                <a class="dashboard-nav_logo py-4 d-inline-block" href="#"><span><img class="mr-0 mr-lg-2"
+                            src="./assets/logo.png" alt="logo"></span> <span
+                        class="d-none d-lg-inline">Dashboard</span></a>
+                <ul>
+                    <li><a href="#"><span><img src="./assets/icons/a-overview.png" alt="overview"></span><span
+                                class="d-none d-lg-inline">Overview</span></a></li>
+                    <li><a href="#"><span><img src="./assets/icons/articles.png" alt="articles"></span><span
+                                class="d-none d-lg-inline">Send Memo</span></a></li>
+                    <li><a href="#"><span><img src="./assets/icons/database.png" alt="database"></span><span
+                                class="d-none d-lg-inline">Database</span></a></li>
+                </ul>
+                <div>
+                    <a href="#"><span>icon</span> <span class="d-none d-lg-inline"> Settings</span></a>
+                    <button class="d-none d-md-block d-lg-none">Carret</button>
+                </div>
             </div>
         </nav>
 
         <section class="dashboard-body col-12 col-md-11 col-lg-10 p-0">
-            <header class="dashboard-header d-flex justify-content-md-between my-3 mx-1 mx-md-2 mx-lg-3 mx-xl-4">
+            <header class="dashboard-header d-flex justify-content-between my-4 mx-1 mx-md-2 mx-lg-3 mx-xl-4">
                 <div class="dashboard-header_title">
                     <h2>Overview</h2>
                 </div>
@@ -37,7 +45,7 @@
                     <div class="dashboard-header_account__notification"><span class="fa fa-bell fa-24"></span></div>
                     <div class="dashboard-header_account__seperator mx-lg-3 mx-1 mx-md-2"></div>
                     <div class="dashboard-header_account__profile">
-                        <p class="m-0 mr-2">Jones Ferdinand</p>
+                        <p class="m-0 mr-2 d-none d-md-block">Jones Ferdinand</p>
                         <img src="./assets/avatar.png" alt="Avatar">
                     </div>
                 </div>
@@ -46,15 +54,18 @@
                 <span class="fa fa-search form-control-feedback"></span>
                 <input type="text" class="form-control border-0 w-75 my-2 rounded-pill" placeholder="Search">
             </div>
-            <main>
+            <main class="mx-1 mx-md-2 mx-lg-3 mx-xl-4">
                 <div class="table">
                     <div class="table-responsive table-borderless table-hover">
-                        <table class="table" id="dataTable" width="100%" cellspacing="0">
+                        <table class="table dashboard-table" id="dataTable" width="100%" cellspacing="0">
                             <thead>
+                                <tr>
+                                    <th id="dashboard-table_header">All Documents</th>
+                                </tr>
                                 <tr>
                                     <th>Document details</th>
                                     <th>Sender/Receivers name</th>
-                                    <th>Datge</th>
+                                    <th>Date</th>
                                     <th></th>
                                     <th></th>
                                 </tr>
@@ -64,98 +75,405 @@
                                 <tr>
                                     <td class="dashboard-table_document-details">
                                         <div class="d-flex flex-row">
-                                            <img src="./assets/avatar.png" alt="avatar">
+                                            <img class="mr-2 mr-lg-4" src="./assets/avatar.png" alt="avatar">
                                             <div>
-                                                <h3>Application for Deferment</h3>
-                                                <p>Updated 1 day ago</p>
+                                                <p>Application for Deferment</p>
+                                                <span>Updated 1 day ago</span>
                                             </div>
                                         </div>
                                     </td>
-                                    <td>System Architect</td>
-                                    <td>Edinburgh</td>
+                                    <td>
+                                        <div class="dashboard-table_document-details">
+                                            <p>Stefan Uweh</p>
+                                            <span>on 24.05.2019</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="dashboard-table_document-details">
+                                            <p>July 20, 2021</p>
+                                            <span>6:30 PM</span>
+                                        </div>
+                                    </td>
                                     <td><button
                                             class="btn btn-sm peel bg-danger rounded-pill px-3 text-light">view</button>
                                     </td>
-                                    <td><span class="fa fa-ellipsis-v"></span></td>
+                                    <td><span style="font-size:1.2rem; color: #C5C7CD;" class="fa fa-ellipsis-v"></span>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td>Garrett Winters</td>
-                                    <td>Accountant</td>
-                                    <td>Tokyo</td>
+                                    <td class="dashboard-table_document-details">
+                                        <div class="d-flex flex-row">
+                                            <img class="mr-2 mr-lg-4" src="./assets/avatar.png" alt="avatar">
+                                            <div>
+                                                <p>Application for Deferment</p>
+                                                <span>Updated 1 day ago</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="dashboard-table_document-details">
+                                            <p>Stefan Uweh</p>
+                                            <span>on 24.05.2019</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="dashboard-table_document-details">
+                                            <p>July 20, 2021</p>
+                                            <span>6:30 PM</span>
+                                        </div>
+                                    </td>
                                     <td><button
                                             class="btn btn-sm peel bg-danger rounded-pill px-3 text-light">view</button>
                                     </td>
-                                    <td><span class="fa fa-ellipsis-v"></span></td>
+                                    <td><span style="font-size:1.2rem; color: #C5C7CD;" class="fa fa-ellipsis-v"></span>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td>Ashton Cox</td>
-                                    <td>Junior Technical Author</td>
-                                    <td>San Francisco</td>
+                                    <td class="dashboard-table_document-details">
+                                        <div class="d-flex flex-row">
+                                            <img class="mr-2 mr-lg-4" src="./assets/avatar.png" alt="avatar">
+                                            <div>
+                                                <p>Application for Deferment</p>
+                                                <span>Updated 1 day ago</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="dashboard-table_document-details">
+                                            <p>Stefan Uweh</p>
+                                            <span>on 24.05.2019</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="dashboard-table_document-details">
+                                            <p>July 20, 2021</p>
+                                            <span>6:30 PM</span>
+                                        </div>
+                                    </td>
                                     <td><button
                                             class="btn btn-sm peel bg-danger rounded-pill px-3 text-light">view</button>
                                     </td>
-                                    <td><span class="fa fa-ellipsis-v"></span></td>
+                                    <td><span style="font-size:1.2rem; color: #C5C7CD;" class="fa fa-ellipsis-v"></span>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td>Cedric Kelly</td>
-                                    <td>Senior Javascript Developer</td>
-                                    <td>Edinburgh</td>
+                                    <td class="dashboard-table_document-details">
+                                        <div class="d-flex flex-row">
+                                            <img class="mr-2 mr-lg-4" src="./assets/avatar.png" alt="avatar">
+                                            <div>
+                                                <p>Application for Deferment</p>
+                                                <span>Updated 1 day ago</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="dashboard-table_document-details">
+                                            <p>Stefan Uweh</p>
+                                            <span>on 24.05.2019</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="dashboard-table_document-details">
+                                            <p>July 20, 2021</p>
+                                            <span>6:30 PM</span>
+                                        </div>
+                                    </td>
                                     <td><button
                                             class="btn btn-sm peel bg-danger rounded-pill px-3 text-light">view</button>
                                     </td>
-                                    <td><span class="fa fa-ellipsis-v"></span></td>
+                                    <td><span style="font-size:1.2rem; color: #C5C7CD;" class="fa fa-ellipsis-v"></span>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td>Airi Satou</td>
-                                    <td>Accountant</td>
-                                    <td>Tokyo</td>
+                                    <td class="dashboard-table_document-details">
+                                        <div class="d-flex flex-row">
+                                            <img class="mr-2 mr-lg-4" src="./assets/avatar.png" alt="avatar">
+                                            <div>
+                                                <p>Application for Deferment</p>
+                                                <span>Updated 1 day ago</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="dashboard-table_document-details">
+                                            <p>Stefan Uweh</p>
+                                            <span>on 24.05.2019</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="dashboard-table_document-details">
+                                            <p>July 20, 2021</p>
+                                            <span>6:30 PM</span>
+                                        </div>
+                                    </td>
                                     <td><button
                                             class="btn btn-sm peel bg-danger rounded-pill px-3 text-light">view</button>
                                     </td>
-                                    <td><span class="fa fa-ellipsis-v"></span></td>
+                                    <td><span style="font-size:1.2rem; color: #C5C7CD;" class="fa fa-ellipsis-v"></span>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td>Brielle Williamson</td>
-                                    <td>Integration Specialist</td>
-                                    <td>New York</td>
+                                    <td class="dashboard-table_document-details">
+                                        <div class="d-flex flex-row">
+                                            <img class="mr-2 mr-lg-4" src="./assets/avatar.png" alt="avatar">
+                                            <div>
+                                                <p>Application for Deferment</p>
+                                                <span>Updated 1 day ago</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="dashboard-table_document-details">
+                                            <p>Stefan Uweh</p>
+                                            <span>on 24.05.2019</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="dashboard-table_document-details">
+                                            <p>July 20, 2021</p>
+                                            <span>6:30 PM</span>
+                                        </div>
+                                    </td>
                                     <td><button
                                             class="btn btn-sm peel bg-danger rounded-pill px-3 text-light">view</button>
                                     </td>
-                                    <td><span class="fa fa-ellipsis-v"></span></td>
+                                    <td><span style="font-size:1.2rem; color: #C5C7CD;" class="fa fa-ellipsis-v"></span>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td>Herrod Chandler</td>
-                                    <td>Sales Assistant</td>
-                                    <td>San Francisco</td>
+                                    <td class="dashboard-table_document-details">
+                                        <div class="d-flex flex-row">
+                                            <img class="mr-2 mr-lg-4" src="./assets/avatar.png" alt="avatar">
+                                            <div>
+                                                <p>Application for Deferment</p>
+                                                <span>Updated 1 day ago</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="dashboard-table_document-details">
+                                            <p>Stefan Uweh</p>
+                                            <span>on 24.05.2019</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="dashboard-table_document-details">
+                                            <p>July 20, 2021</p>
+                                            <span>6:30 PM</span>
+                                        </div>
+                                    </td>
                                     <td><button
                                             class="btn btn-sm peel bg-danger rounded-pill px-3 text-light">view</button>
                                     </td>
+                                    <td><span style="font-size:1.2rem; color: #C5C7CD;" class="fa fa-ellipsis-v"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="dashboard-table_document-details">
+                                        <div class="d-flex flex-row">
+                                            <img class="mr-2 mr-lg-4" src="./assets/avatar.png" alt="avatar">
+                                            <div>
+                                                <p>Application for Deferment</p>
+                                                <span>Updated 1 day ago</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="dashboard-table_document-details">
+                                            <p>Stefan Uweh</p>
+                                            <span>on 24.05.2019</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="dashboard-table_document-details">
+                                            <p>July 20, 2021</p>
+                                            <span>6:30 PM</span>
+                                        </div>
+                                    </td>
+                                    <td><button
+                                            class="btn btn-sm peel bg-danger rounded-pill px-3 text-light">view</button>
+                                    </td>
+                                    <td><span style="font-size:1.2rem; color: #C5C7CD;" class="fa fa-ellipsis-v"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="dashboard-table_document-details">
+                                        <div class="d-flex flex-row">
+                                            <img class="mr-2 mr-lg-4" src="./assets/avatar.png" alt="avatar">
+                                            <div>
+                                                <p>Application for Deferment</p>
+                                                <span>Updated 1 day ago</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="dashboard-table_document-details">
+                                            <p>Stefan Uweh</p>
+                                            <span>on 24.05.2019</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="dashboard-table_document-details">
+                                            <p>July 20, 2021</p>
+                                            <span>6:30 PM</span>
+                                        </div>
+                                    </td>
+                                    <td><button
+                                            class="btn btn-sm peel bg-danger rounded-pill px-3 text-light">view</button>
+                                    </td>
+                                    <td><span style="font-size:1.2rem; color: #C5C7CD;" class="fa fa-ellipsis-v"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="dashboard-table_document-details">
+                                        <div class="d-flex flex-row">
+                                            <img class="mr-2 mr-lg-4" src="./assets/avatar.png" alt="avatar">
+                                            <div>
+                                                <p>Application for Deferment</p>
+                                                <span>Updated 1 day ago</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="dashboard-table_document-details">
+                                            <p>Stefan Uweh</p>
+                                            <span>on 24.05.2019</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="dashboard-table_document-details">
+                                            <p>July 20, 2021</p>
+                                            <span>6:30 PM</span>
+                                        </div>
+                                    </td>
+                                    <td><button
+                                            class="btn btn-sm peel bg-danger rounded-pill px-3 text-light">view</button>
+                                    </td>
+                                    <td><span style="font-size:1.2rem; color: #C5C7CD;" class="fa fa-ellipsis-v"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="dashboard-table_document-details">
+                                        <div class="d-flex flex-row">
+                                            <img class="mr-2 mr-lg-4" src="./assets/avatar.png" alt="avatar">
+                                            <div>
+                                                <p>Application for Deferment</p>
+                                                <span>Updated 1 day ago</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="dashboard-table_document-details">
+                                            <p>Stefan Uweh</p>
+                                            <span>on 24.05.2019</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="dashboard-table_document-details">
+                                            <p>July 20, 2021</p>
+                                            <span>6:30 PM</span>
+                                        </div>
+                                    </td>
+                                    <td><button
+                                            class="btn btn-sm peel bg-danger rounded-pill px-3 text-light">view</button>
+                                    </td>
+                                    <td><span style="font-size:1.2rem; color: #C5C7CD;" class="fa fa-ellipsis-v"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="dashboard-table_document-details">
+                                        <div class="d-flex flex-row">
+                                            <img class="mr-2 mr-lg-4" src="./assets/avatar.png" alt="avatar">
+                                            <div>
+                                                <p>Application for Deferment</p>
+                                                <span>Updated 1 day ago</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="dashboard-table_document-details">
+                                            <p>Stefan Uweh</p>
+                                            <span>on 24.05.2019</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="dashboard-table_document-details">
+                                            <p>July 20, 2021</p>
+                                            <span>6:30 PM</span>
+                                        </div>
+                                    </td>
+                                    <td><button
+                                            class="btn btn-sm peel bg-danger rounded-pill px-3 text-light">view</button>
+                                    </td>
+                                    <td><span style="font-size:1.2rem; color: #C5C7CD;" class="fa fa-ellipsis-v"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="dashboard-table_document-details">
+                                        <div class="d-flex flex-row">
+                                            <img class="mr-2 mr-lg-4" src="./assets/avatar.png" alt="avatar">
+                                            <div>
+                                                <p>Application for Deferment</p>
+                                                <span>Updated 1 day ago</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="dashboard-table_document-details">
+                                            <p>Stefan Uweh</p>
+                                            <span>on 24.05.2019</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="dashboard-table_document-details">
+                                            <p>July 20, 2021</p>
+                                            <span>6:30 PM</span>
+                                        </div>
+                                    </td>
+                                    <td><button
+                                            class="btn btn-sm peel bg-danger rounded-pill px-3 text-light">view</button>
+                                    </td>
+                                    <td><span style="font-size:1.2rem; color: #C5C7CD;" class="fa fa-ellipsis-v"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="dashboard-table_document-details">
+                                        <div class="d-flex flex-row">
+                                            <img class="mr-2 mr-lg-4" src="./assets/avatar.png" alt="avatar">
+                                            <div>
+                                                <p>Application for Deferment</p>
+                                                <span>Updated 1 day ago</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="dashboard-table_document-details">
+                                            <p>Stefan Uweh</p>
+                                            <span>on 24.05.2019</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="dashboard-table_document-details">
+                                            <p>July 20, 2021</p>
+                                            <span>6:30 PM</span>
+                                        </div>
+                                    </td>
+                                    <td><button
+                                            class="btn btn-sm peel bg-danger rounded-pill px-3 text-light">view</button>
+                                    </td>
+                                    <td><span style="font-size:1.2rem; color: #C5C7CD;" class="fa fa-ellipsis-v"></span>
+                                    </td>
+                                </tr>
 
-                                    <td><span class="fa fa-ellipsis-v"></span></td>
-
-                                </tr>
-                                <tr>
-                                    <td>Rhona Davidson</td>
-                                    <td>Integration Specialist</td>
-                                    <td>Tokyo</td>
-                                    <td><button
-                                            class="btn btn-sm peel bg-danger rounded-pill px-3 text-light">view</button>
-                                    </td>
-
-                                    <td><span class="fa fa-ellipsis-v"></span></td>
-                                </tr>
-                                <tr>
-                                    <td>Colleen Hurst</td>
-                                    <td>Javascript Developer</td>
-                                    <td>San Francisco</td>
-                                    <td><button
-                                            class="btn btn-sm peel bg-danger rounded-pill px-3 text-light">view</button>
-                                    </td>
-
-                                    <td><span class="fa fa-ellipsis-v"></span></td>
-                                </tr>
                             </tbody>
                         </table>
+                        <div class='pagination-container'>
+                            <nav>
+                                <ul class="pagination">
+                                    <!--	Here the JS Function Will Add the Rows -->
+                                </ul>
+                            </nav>
+                        </div>
                     </div>
                 </div>
             </main>
@@ -168,14 +486,9 @@
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./node_modules/popper.js/dist/popper.min.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('#basic-data-table').DataTable({
-                "dom": '<"row justify-content-between top-information"lf>rt<"row justify-content-between bottom-information"ip><"clear">'
-            });
-        });
-    </script>
-
+    <script src="./node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
