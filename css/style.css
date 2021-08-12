@@ -1,0 +1,261 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.Nav {
+    min-height: 82px;
+    max-height: 106px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+} 
+
+.Nav__divider {
+    height: 82px;
+    width: 3px !important;
+    border-left: 3px solid black;
+    background-color: black;
+}
+
+.landing{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    min-height: calc(100vh - 106px);
+}
+
+.landing h1{
+    font-weight: 700;
+    letter-spacing: 3px;
+    word-spacing: 2px;
+    font-size: clamp(48px, calc(3rem + ((1vw - 3.6px) * 5.3797)), 82px);
+    min-height: 0vw;
+    color: #4AB1FF;
+    
+}
+
+
+
+.landing div{
+    height: fit-content;
+}
+
+.landing p{
+    font-size: clamp(18px, calc(3rem + ((1vw - 3.6px) * 5.3797)), 28px);
+
+}
+
+.landing button{
+    border-width: 2.5px !important;
+    font-weight: 700;
+}
+
+.bg-img{
+    overflow: hidden;
+}
+
+.bg-img img{
+    max-width: 90%;
+    
+}
+
+.Nav ul li a{
+    font-weight: 700;
+    color: black !important;
+}
+
+
+
+@media screen and (min-width: 992px) {
+    .landing div{
+        align-self: center;
+        flex-wrap: wrap-reverse;
+    }
+
+    .landing button{
+        padding: 1rem 2rem;
+    }
+
+    .landing_image {
+        min-width: 700px;
+    }
+
+   
+}
+
+@media screen and (max-width: 991px) {
+    .landing div{
+        flex-wrap: wrap-reverse;
+    }
+
+    .landing img{
+    }
+}
+
+
+
+/* Login & Sign-Up */
+
+.landing-container{
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh !important;
+}
+
+.landing-container_r{
+
+}
+
+.landing-container_l{
+    height: 100% !important;
+    filter: drop-shadow(0px 0px 23px rgba(0,0,0,0.5));
+    padding: 0 !important;
+
+}
+
+.landing-container_l div {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 74% 100%, 0% 100%);
+    background-color: #4AB1FF;
+}
+
+.landing-container_l div img{
+        align-self: center;
+    width: 95%;
+
+}
+
+
+
+.landing-container_r{
+    height: calc(100vh - 102px) !important;
+    display: flex;
+    flex-direction: column;
+    margin-top: 98px;
+}
+
+.landing-container_r  a{
+    margin: 0 auto;
+    height: 64px;
+}
+
+.landing-container_r a img{
+    height: 42px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.form .btn{
+    /* display: none; */
+    width: fit-content;
+    margin: 0 auto;
+    border-width: 2.5px;
+    font-weight: 700;
+}
+
+
+.inp {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    max-width: 480px;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.inp .label {
+    position: absolute;
+    top: 20px;
+    left: 12px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+    transform-origin: 0 0;
+    transform: translate3d(0, 0, 0);
+    transition: all 0.2s ease;
+    pointer-events: none;
+}
+
+.inp .focus-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.05);
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.inp input {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    border: 0;
+    font-family: inherit;
+    padding: 16px 12px 0 12px;
+    height: 56px;
+    font-size: 16px;
+    font-weight: 400;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+    color: #000;
+    transition: all 0.15s ease;
+    margin: 16px 0;
+}
+
+.inp input:hover {
+    background: rgba(0, 0, 0, 0.04);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.inp input:not(:placeholder-shown)+.label {
+    color: rgba(0, 0, 0, 0.5);
+    transform: translate3d(0, -12px, 0) scale(0.75);
+}
+
+.inp input:focus {
+    background: rgba(0, 0, 0, 0.05);
+    outline: none;
+    box-shadow: inset 0 -2px 0 #0077FF;
+}
+
+.inp input:focus+.label {
+    color: #0077FF;
+    transform: translate3d(0, -12px, 0) scale(0.75);
+}
+
+.inp input:focus+.label+.focus-bg {
+    transform: scaleX(1);
+    transition: all 0.1s ease;
+}
+
+
+.form_footer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.form_footer p {
+    font-size: 16px ;
+}
+
+.form_footer p span{
+    color: #0077FF;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
