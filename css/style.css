@@ -264,3 +264,7 @@ body{
 .navbar_login{
     background-color: transparent;
 }
+
+.landing-container_r{
+    flex-wrap: nowrap !important;
+}
