@@ -3,6 +3,15 @@ body{
     padding: 0;
 }
 
+
+
+/* General Styles */
+
+.button-primary{
+    background-color: #A80A0A;
+    color: white;
+}
+
 .Nav {
     min-height: 82px;
     max-height: 82px;
@@ -44,6 +53,68 @@ body{
 }
 
 
+
+
+
+
+
+
+
+
+
+
+/* SIGN UP PAGE */
+
+#landing_signup {
+    background-image: url(../assets/register-bg.png);
+    height: calc(100vh);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.signup_container {
+    max-width: 600px;
+}
+
+
+
+.signup_container h2 {
+    color: #A80A0A;
+    font-weight: 700;
+    text-align: center;
+    font-size: clamp(18px, calc(1.25rem + ((1vw - 3.6px) * 1.9737)), 32px);
+
+}
+
+.signup_container form input {
+    display: block;
+    width: 100%;
+    background-color: #F7F7F7;
+    border: none;
+    height: 50px;
+    padding-left: 16px;
+    margin: 16px 0;
+    border-radius: 4px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+}
+
+.signup_container btn-primary {
+    color: white;
+    background-color: #A80A0A;
+}
+
+.signup_social a,
+.signup_social button {
+    background-color: #F7F7F7;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    border-width: 0;
+    height: 50px;
+
+}
+
+
 /* For medium screens */
 @media screen and (min-width: 768px) {
     section h1{
@@ -60,45 +131,7 @@ body{
 }
 
 
-/* SIGN UP PAGE */
 
-#landing_signup{
-    background-image: url(../assets/register-bg.png);
-    height: calc(100vh);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.signup_container{
-    max-width: 600px;
-}
-
-
-
-.signup_container h2{
-    color: #A80A0A;
-    font-weight: 700;
-    text-align: center;
-    font-size: clamp(18px, calc(1.25rem + ((1vw - 3.6px) * 1.9737)), 32px);
-    
-}
-
-.signup_container form input{ 
-    display: block;
-    width: 100%;
-    background-color: #F7F7F7;
-    border: none;
-    height: 50px ;
-    padding-left: 16px;
-    margin: 16px 0;
-    border-radius: 4px;
-}
-
-.signup_container form input:last-child{
-    color: white;
-    background-color: #A80A0A;
-}
 
 
 
