@@ -13,54 +13,23 @@
 
 <body>
     <!-- NAVBAR-->
-    <nav class="Nav navbar navbar_login navbar-expand-lg py-0 navbar-light">
-        <div class="container-lg">
-            <a href="#" class="navbar-brand d-none">
-                <!-- Logo Image -->
-                <img src="./assets/TEVE.png" height="24" alt="logo" class="d-inline-block align-middle mr-2">
-            </a>
-            <ul class="navbar-nav ml-auto d-flex align-items-lg-center">
-                <li class="nav-item"><a href="./index.html" class="nav-link mx-lg-3 p-lg-3">HOME</a></li>
-            </ul>
-        </div>
-    </nav>
+
 
     <!-- Landing Page -->
 
-    <section class="row landing p-0 m-0">
-        <div class="row landing-container">
-            <div class="col-lg-6 col-12 d-lg-flex justify-content-center landing-container_l d-none">
-                <div>
-                    <img src="./assets/Saly-11.png" alt="man">
-                </div>
-
-            </div>
-            <div class="col-lg-6 col-12 bg-img landing-container_r pt-0 pt-lg-5">
-                <a class="mb-3 mb-lg-5" href="./index.html"><img src="./assets/TEVE.png" alt="Teve"></a>
-                <form class="signup_form form" action="#">
-                    <label for="name" class="inp">
-                        <input type="text" id="inp" placeholder="&nbsp;">
-                        <span class="label">Name</span>
-                        <span class="focus-bg"></span>
-                    </label>
-                    <label for="name" class="inp">
-                        <input type="email" id="inp" placeholder="&nbsp;">
-                        <span class="label">Email</span>
-                        <span class="focus-bg"></span>
-                    </label>
-                    <label for="password" class="inp">
-                        <input type="password" id="inp" placeholder="&nbsp;">
-                        <span class="label">password</span>
-                        <span class="focus-bg"></span>
-                    </label>
-                    <input class="btn btn-lg border-dark px-1 px-lg-4" type="button" value="SIGN UP">
+    <section id="landing_signup" class="d-flex align-items-center">
+        <div class=" m-2 py-4 signup_container container bg-white d-block py-2 py-md-5 px-sm-2 px-md-5">
+            <img class="d-block mx-auto mb-4 mb-lg-5" src="./assets/UnilagLogo.png" alt="Unilag Logo" sizes="52">
+            <h2 class="mb-4">E-MEMO MANAGEMENT SYSTEM</h2>
+            <div>
+                <form action="#">
+                    <input type="text" name="fullname" id="fullname" placeholder="Full Name" class="input-group-lg">
+                    <input type="email" name="email" id="email" placeholder="Email" class="input-group-lg">
+                    <input type="password" name="password" id="password">
+                    <input type="submit" value="Register">
                 </form>
-                <div class="form_footer mt-3 mt-lg-5">
-                    <p>Or</p>
-                    <a class="m-2 mllg-4" href="#"><img src="./assets/search 1.png" alt="google"></a>
-                    <p>Already have an account? <a href="./login.html"> <span> Sign In </span></a> </p>
-
-                </div>
+                <button>Login</button>
+                <button><span style="fa fa-google"></span> Register With Google</button>
             </div>
         </div>
 

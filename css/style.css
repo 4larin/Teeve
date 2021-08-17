@@ -5,13 +5,12 @@ body{
 
 .Nav {
     min-height: 82px;
-    max-height: 106px;
+    max-height: 82px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 9999;
-    background-color: white;
 } 
 
 .Nav__divider {
@@ -21,250 +20,104 @@ body{
     background-color: black;
 }
 
-.landing{
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    min-height: calc(100vh - 106px);
-}
-
-.landing h1{
-    font-weight: 700;
-    letter-spacing: 3px;
-    word-spacing: 2px;
-    font-size: clamp(48px, calc(3rem + ((1vw - 3.6px) * 5.3797)), 82px);
-    min-height: 0vw;
-    color: #4AB1FF;
+#landing{
+    height: calc(100vh);
+    background-image: url(../assets/beatriz-perez-moya-XN4T2PVUUgk-unsplash\ 1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     
 }
 
-
-
-.landing div{
-    height: fit-content;
+#landing h1{
+    color: #E30016;
+    font-size: clamp(48px, calc(3rem + ((1vw - 3.6px) * 6.25)), 86px);
 }
 
-.landing p{
-    font-size: clamp(18px, calc(3rem + ((1vw - 3.6px) * 5.3797)), 28px);
-
+#landing p{
+    font-weight: 500;
+    font-size: 18px;
 }
 
-.landing button{
-    border-width: 2.5px !important;
-    font-weight: 700;
-}
-
-.bg-img{
-    overflow: hidden;
-}
-
-.bg-img img{
-    max-width: 90%;
-    
-}
-
-.Nav ul li a{
-    font-weight: 700;
-    color: black !important;
+.landing-p{
+    max-width: 400px;
 }
 
 
+/* For medium screens */
+@media screen and (min-width: 768px) {
+    section h1{
+        font-size: clamp(48px, calc(3rem + ((1vw - 3.6px) * 3.1646)), 68px);
+    }
+}
+
+/* For large screens */
 
 @media screen and (min-width: 992px) {
-    .landing div{
-        align-self: center;
-        flex-wrap: wrap-reverse;
+    section{
     }
-
-    .landing button{
-        padding: 1rem 2rem;
-    }
-
-    .landing_image {
-        min-width: 700px;
-    }
-
-   
+    
 }
 
-@media screen and (max-width: 991px) {
-    .landing div{
-        flex-wrap: wrap-reverse;
-    }
 
-    .landing img{
-    }
+/* SIGN UP PAGE */
+
+#landing_signup{
+    background-image: url(../assets/register-bg.png);
+    height: calc(100vh);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.signup_container{
+    max-width: 600px;
 }
 
 
 
-/* Login & Sign-Up */
-
-.landing-container{
-    padding: 0;
-    margin: 0;
-    width: 100vw;
-    height: 100vh !important;
-}
-
-.landing-container_r{
-    flex-wrap: nowrap;
-
-}
-
-.landing-container_l{
-    height: 100% !important;
-    filter: drop-shadow(0px 0px 23px rgba(0,0,0,0.5));
-    padding: 0 !important;
-
-}
-
-.landing-container_l div {
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    clip-path: polygon(0 0, 100% 0, 74% 100%, 0% 100%);
-    background-color: #4AB1FF;
-}
-
-.landing-container_l div img{
-        align-self: center;
-    width: 95%;
-
-}
-
-
-
-.landing-container_r{
-    height: calc(100vh - 102px) !important;
-    display: flex;
-    flex-direction: column;
-    margin-top: 98px;
-}
-
-.landing-container_r  a{
-    margin: 0 auto;
-    height: 64px;
-}
-
-.landing-container_r a img{
-    height: 42px;
-}
-
-.form{
-    display: flex;
-    flex-direction: column;
-}
-
-.form .btn{
-    /* display: none; */
-    width: fit-content;
-    margin: 0 auto;
-    border-width: 2.5px;
+.signup_container h2{
+    color: #A80A0A;
     font-weight: 700;
-}
-
-
-.inp {
-    position: relative;
-    margin: auto;
-    width: 100%;
-    max-width: 480px;
-    border-radius: 3px;
-    overflow: hidden;
-    margin-bottom: 30px;
-}
-
-.inp .label {
-    position: absolute;
-    top: 20px;
-    left: 12px;
-    font-size: 16px;
-    color: rgba(0, 0, 0, 0.5);
-    font-weight: 500;
-    transform-origin: 0 0;
-    transform: translate3d(0, 0, 0);
-    transition: all 0.2s ease;
-    pointer-events: none;
-}
-
-.inp .focus-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.05);
-    z-index: -1;
-    transform: scaleX(0);
-    transform-origin: left;
-}
-
-.inp input {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 100%;
-    border: 0;
-    font-family: inherit;
-    padding: 16px 12px 0 12px;
-    height: 56px;
-    font-size: 16px;
-    font-weight: 400;
-    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.3);
-    color: #000;
-    transition: all 0.15s ease;
-    margin: 16px 0;
-}
-
-.inp input:hover {
-    background: rgba(0, 0, 0, 0.04);
-    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.5);
-}
-
-.inp input:not(:placeholder-shown)+.label {
-    color: rgba(0, 0, 0, 0.5);
-    transform: translate3d(0, -12px, 0) scale(0.75);
-}
-
-.inp input:focus {
-    background: rgba(0, 0, 0, 0.05);
-    outline: none;
-    box-shadow: inset 0 -2px 0 #0077FF;
-}
-
-.inp input:focus+.label {
-    color: #0077FF;
-    transform: translate3d(0, -12px, 0) scale(0.75);
-}
-
-.inp input:focus+.label+.focus-bg {
-    transform: scaleX(1);
-    transition: all 0.1s ease;
-}
-
-
-.form_footer{
-    display: flex;
-    flex-direction: column;
     text-align: center;
+    font-size: clamp(18px, calc(1.25rem + ((1vw - 3.6px) * 1.9737)), 32px);
+    
 }
 
-.form_footer p {
-    font-size: 16px ;
+.signup_container form input{ 
+    display: block;
+    width: 100%;
+    background-color: #F7F7F7;
+    border: none;
+    height: 50px ;
+    padding-left: 16px;
+    margin: 16px 0;
+    border-radius: 4px;
 }
 
-.form_footer p span{
-    color: #0077FF;
-    font-weight: 700;
-    cursor: pointer;
+.signup_container form input:last-child{
+    color: white;
+    background-color: #A80A0A;
 }
 
 
-.navbar_login{
-    background-color: transparent;
-}
 
-.landing-container_r{
-    flex-wrap: nowrap !important;
+
+
+
+
+
+
+
+
+
+
+/* Bootstrap Override */
+
+
+.btn-outline-dark{
+    border-width: 2px;
+    border-color: black;
+    color: black;
+    font-weight: 500;
 }
