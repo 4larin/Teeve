@@ -8,7 +8,7 @@ body{
 /* General Styles */
 
 .button-primary{
-    background-color: #A80A0A;
+    background-color: #A80A0A !important;
     color: white;
 }
 
@@ -75,6 +75,8 @@ body{
 
 .signup_container {
     max-width: 600px;
+    
+
 }
 
 
@@ -115,11 +117,36 @@ body{
 }
 
 
+#remember_me{
+    width: 20px;
+    height: 20px;
+    color: #A80A0A;
+    background-color: #A80A0A;
+
+}
+
+#remember_me:checked{
+    background-color: #A80A0A;
+    color: #A80A0A;
+}
+
+#forgotten_password{
+    color: #A80A0A ;
+}
+
+
+
+
+
+
+
+
 /* For medium screens */
 @media screen and (min-width: 768px) {
     section h1{
         font-size: clamp(48px, calc(3rem + ((1vw - 3.6px) * 3.1646)), 68px);
     }
+
 }
 
 /* For large screens */
@@ -153,4 +180,11 @@ body{
     border-color: black;
     color: black;
     font-weight: 500;
+}
+
+
+.form-control:focus {
+    box-shadow: 0 0 4px #996161 !important;
+    border: none;
+
 }
