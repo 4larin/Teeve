@@ -1,0 +1,145 @@
+main{
+    transition: all 1s;
+
+}
+
+.step-1,
+.step-2{
+    height: 8px;
+    /* background-color: #B9BABD; */
+}
+
+.step-0{
+    height: 8px;
+    width: 100%;
+    position: relative;
+    top: 8px;
+    background-color: #B9BABD;
+    border-radius: 200px;
+
+}
+
+.step-indicator{
+    background-color: black;
+    height: 8px;
+    width: 50%;
+    overflow: hidden;
+    border-radius: 200px;
+
+}
+
+
+
+.progress-tracker{
+    position: relative;
+}
+
+.progress-tracker-2 {
+    transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+}
+
+.progress-tracker img{
+    width: 50px;
+}
+
+.progress-tracker img:hover {
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.progress-tracker h3{
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 8px;
+    
+}
+
+.progress-tracker-1{
+    width: fit-content;
+}
+
+.details_details{
+    min-width: 85px;
+    display: inline-block;
+    font-size: 18px;
+}
+
+.details_value{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+
+
+
+
+@media screen and (max-width:768px) {
+
+    .step-0 {
+        height: 100%;
+        width: 8px;
+        position: absolute;
+        top: 8px;
+        background-color: #B9BABD;
+
+    }
+
+    .step-indicator {
+        
+        background-color: black;
+        height: 50%;
+        width: 8px;
+        overflow: hidden;
+    }
+
+    .step-1,
+    .step-2{
+        width: 8px;
+        min-height: 40vh; 
+        position: relative;
+        
+ 
+    }
+
+    
+    .progress-tracker-1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+    }
+    
+    .progress-tracker-2 {
+        position: absolute;
+        top: 0;
+        left:0;
+        transform: translateY(-50%);
+    }
+
+    .progress-tracker-3 {
+        position: absolute;
+        bottom: 0;
+        left:0;
+    }
+
+    .progress-tracker-1,
+    .progress-tracker-2,
+    .progress-tracker-3{
+        display: flex;
+        align-items: center;
+    }
+
+    .progress-tracker-2{
+        flex-direction: row;
+    }
+
+    .progress-tracker h3 {
+        margin-left: 8px;
+    }
+}
+

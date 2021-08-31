@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap-reboot.css">
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/database.css">
     <link rel="stylesheet" href="./css/dashboard.css">
-    <link rel="stylesheet" href="./css/send-memo.css">
+    <link rel="stylesheet" href="./css/single-memo.css">
     <title>E-memo - Database</title>
 </head>
 
@@ -24,11 +24,10 @@
                         class="d-none d-lg-inline">Dashboard</span></a>
                 <div class="dashboard-nav_navitems d-flex flex-column justify-content-between">
                     <ul>
-                        <li class=""><a href="./overview.html"><span><img class="mx-3" width="20"
+                        <li class="active"><a href="./overview.html"><span><img class="mx-3" width="20"
                                         src="./assets/icons/overview.svg" alt="overview"></span><span
-                                    class="d-none mt-2 d-lg-inline">Overview</span></a>
-                        </li>
-                        <li class="active"><a href="./send-memo.html"><span><img class="mx-3" width="20"
+                                    class="d-none mt-2 d-lg-inline">Overview</span></a></li>
+                        <li class=""><a href="./send-memo.html"><span><img class="mx-3" width="20"
                                         src="./assets/icons/send_memo.svg" alt="overview"></span><span
                                     class="d-none mt-2 d-lg-inline">Send Memo</span></a>
                         </li>
@@ -37,6 +36,7 @@
                                     class="d-none mt-2 d-lg-inline">Database</span></a>
                         </li>
                     </ul>
+
                     <ul class="mb-3">
                         <li class=""><a href="#"><span><img class="mx-3" width="20" src="./assets/icons/settings.svg"
                                         alt="overview"></span><span class="d-none mt-1 d-lg-inline">Settings</span></a>
@@ -49,7 +49,7 @@
         <section class="dashboard-body col-12 col-md-11 col-lg-10 p-0">
             <header class="dashboard-header d-flex justify-content-between my-4 mx-1 mx-md-2 mx-lg-3 mx-xl-4">
                 <div class="dashboard-header_title">
-                    <h2>Send Memo</h2>
+                    <h2>Memo Tracker</h2>
                 </div>
                 <div class="dashboard-header_account d-flex flex-row justify-content-md-between align-items-center">
                     <div class="dashboard-header_account__notification"><span class="fa fa-bell fa-24"></span></div>
@@ -65,75 +65,49 @@
                 <input type="text" class="form-control border-0 w-100 my-2 rounded-pill dashboard-search"
                     placeholder="Search database">
             </div>
+            <main class="my-4 mx-1 mx-md-2 mx-lg-3 mx-xl-4 mt-5">
+                <div class="row mx-auto progress-tracker pl-3 pl-md-0">
+                    <div class="step-0">
+                        <div class="step-indicator"></div>
+                    </div>
 
-            <main>
-                <div class="row m-0 p-2">
-                    <div class="col-12 col-md-6 mb-4 mb-md-0">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <label class="input-group-text px-3" for="inputGroupSelect01">To:</label>
-                            </div>
-                            <input class="form-control" id="inputGroupSelect01" list="to_values"
-                                placeholder="Choose...">
-                            <datalist id="to_values">
-                                <option value="Jon Doe">
-                                <option value="Mary Cake">
-                                <option value="Saani Yusuf">
-                                <option value="Lucy Stone">
-                            </datalist>
-                            </input>
-                        </div>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <label class="input-group-text px-3" for="inputGroupSelect02">Through</label>
-                            </div>
-                            <input class="form-control" id="inputGroupSelect02" list="to_values"
-                                placeholder="Choose...">
-                            <datalist id="to_values">
-                                <option value="Jon Doe">
-                                <option value="Mary Cake">
-                                <option value="Saani Yusuf">
-                                <option value="Lucy Stone">
-                            </datalist>
-                            </input>
-                        </div>
-                        <div class="file-upload" onclick="">
-                            <div class="image-upload-wrap">
-                                <input class="file-upload-input" type='file' onchange="readURL(this);"
-                                    accept="image/*" />
-                                <div class="drag-text h-100">
-                                    <p>Drag and drop a file here <br> or <br> <button class="btn btn-dark mt-2">Browse
-                                            Files</button></p>
-                                </div>
-                            </div>
-                            <div class="file-upload-content">
-                                <img class="file-upload-image" src="#" alt="your image" />
-                                <div class="image-title-wrap">
-                                    <button type="button" onclick="removeUpload(); console.log('file removed')"
-                                        class="btn btn-danger remove-image">Remove <span class="image-title">Uploaded
-                                            Image</span></button>
-                                </div>
-                            </div>
+                    <div class="col12 col-md-6 m-0 p-0">
+                        <div class="step-1"></div>
+                        <div class="my-0 my-md-4 mx-5 mx-md-0 progress-tracker-1">
+                            <img class="" src="./assets/avatar.png" alt="Jones">
+                            <h3 class="text-center">You</h3>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6">
-                        <textarea class="form-control w-100 h-100 " name="comments" id="comments" cols="30" rows="10"
-                            placeholder="Add comments"></textarea>
+                    <div class="col12 col-md-6 m-0 p-0">
+                        <div class="step-2"></div>
+                        <div class="m-0 p-o d-flex justify-content-between progress-tracker-step2">
+                            <div class="my-0 my-md-4 mx-5 mx-md-0 progress-tracker-2">
+                                <img src="./assets/Course-advisor.png" alt="Course Advisor">
+                                <h3 class="text-center">Course Advisor</h3>
+                            </div>
+                            <div class="my-0 my-md-4 mx-5 mx-md-0 progress-tracker-3">
+                                <img src="./assets/hod.png" alt="HOD">
+                                <h3 class="text-center">H.O.D</h3>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-
-
-
-    </div>
-
-
-
-    </div>
-
-
-    </main>
-    </section>
+                <div class="mt-5">
+                    <div class="my-4">
+                        <p><span class="details_details">Title:</span> <span class="details_value">Application for
+                                Deferment</span> </p>
+                        <p> <span class="details_details"> Sent by:</span> <span class="details_value">Stefan
+                                Uweh</span> </p>
+                        <p> <span class="details_details"> Date sent:</span> <span class="details_value">July 20, 2020 |
+                                6:30 PM</span> </p>
+                    </div>
+                    <div class="my-4">
+                        <button class="btn btn-danger mr-2">VIEW MEMO</button>
+                        <button class="btn btn-danger">FOWARD MEMO</button>
+                    </div>
+                </div>
+            </main>
+        </section>
     </div>
 
 

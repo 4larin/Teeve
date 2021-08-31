@@ -3,7 +3,7 @@
     /* position: fixed; */
     top: 0;
     left: 0;
-    height: 1090vh !important;
+    min-height: 100vh !important;
     padding: 0;    
 }
 
@@ -128,11 +128,11 @@
     position: absolute;
     right: 0;
     top: 0;
-    width: 10px;
-    height: 10px;
+    width: 14px;
+    height: 14px;
     background-color: #3751FF;
     border-radius: 100px;
-    border: 1px solid white;
+    border: 2px solid #F7F8FC;
 }
 
 
