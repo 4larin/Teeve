@@ -1,0 +1,30 @@
+.profile_profile-image{
+    width: 80%;
+    max-width: 380px;
+    border-radius: 100%;
+    box-shadow: 0 0 5px #cfd1df;
+    padding: 15px;
+}
+
+.details_details {
+    min-width: 120px;
+    display: inline-block;
+    font-size: 18px;
+}
+
+.details_value {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+@media screen and (max-width:768px){
+    .details_details{
+        min-width: 90px;
+        font-size: 16px;
+    }
+
+    .details_value{
+        font-size: 16px;
+    }
+
+}

@@ -35,3 +35,20 @@ $('.image-upload-wrap').bind('dragover', function () {
     $('.image-upload-wrap').removeClass('image-dropping');
 });
 
+
+
+// To edit profile 
+
+function handleEditProfile(){
+  $("#USERPROFILE_EDIT").addClass('d-block')
+  $("#USERPROFILE").addClass('d-none')
+  $("#USERPROFILE_EDIT").removeClass('d-none')
+  $("#USERPROFILE").removeClass('d-block')
+}
+
+function handleSaveProfile(){
+  $("#USERPROFILE_EDIT").addClass('d-none')
+  $("#USERPROFILE").addClass('d-block')
+  $("#USERPROFILE_EDIT").removeClass('d-block')
+  $("#USERPROFILE").removeClass('d-none')
+}
