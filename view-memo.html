@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/dashboard.css">
-    <link rel="stylesheet" href="./css/send-memo.css">
+    <link rel="stylesheet" href="./css/view-memo.css">
     <title>E-memo - View Memo</title>
 </head>
 
@@ -81,48 +81,25 @@
                                         6:30 PM</span> </p>
                             </div>
                             <div class="my-4">
-                                <!-- <button onclick="location.href='view-memo.html'" class="btn btn-danger mr-2">VIEW
-                                    MEMO</button> -->
+                                <button onclick="location.href='view-memo.html'" class="btn btn-danger mr-2">VIEW
+                                    MEMO</button>
                                 <button class="btn btn-danger">FOWARD MEMO</button>
                             </div>
                         </div>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <label class="input-group-text px-3" for="inputGroupSelect02">Through</label>
-                            </div>
-                            <input class="form-control" id="inputGroupSelect02" list="to_values"
-                                placeholder="Choose...">
-                            <datalist id="to_values">
-                                <option value="Jon Doe">
-                                <option value="Mary Cake">
-                                <option value="Saani Yusuf">
-                                <option value="Lucy Stone">
-                            </datalist>
-                            </input>
+                        <div class="input-group ">
+                            <textarea class="form-control w-100" name="comments" id="comments" cols="30" rows="10"
+                                placeholder="Add your comments here..."></textarea>
+                            <button class="btn btn-danger w-100 mt-3 btn-lg">ADD COMMENT</button>
+                            <span class="view-memo-signIn-prompt mt-4">You need to sign in to make comments, <span>
+                                    Click here
+                                    to sign in </span> </span>
                         </div>
-                        <div class="file-upload" onclick="">
-                            <div class="image-upload-wrap">
-                                <input class="file-upload-input" type='file' onchange="readURL(this);"
-                                    accept="image/*" />
-                                <div class="drag-text h-100">
-                                    <p>Drag and drop a file here <br> or <br> <button class="btn btn-dark mt-2">Browse
-                                            Files</button></p>
-                                </div>
-                            </div>
-                            <div class="file-upload-content">
-                                <img class="file-upload-image" src="#" alt="your image" />
-                                <div class="image-title-wrap">
-                                    <button type="button" onclick="removeUpload(); console.log('file removed')"
-                                        class="btn btn-danger remove-image">Remove <span class="image-title">Uploaded
-                                            Image</span></button>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-6 mt-5 mt-md-0 view-memo-pcomments">
                         <p>Previous comments</p>
-                        <div class="form-control w-100 h-100 " name="comments" id="comments">
-                            some previous coments goes here perhaps
+                        <div class="form-control w-100 ">
+                            <span> You have not made any comments</span>
                         </div>
                     </div>
                 </div>

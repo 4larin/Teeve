@@ -1,0 +1,40 @@
+.details_details {
+    min-width: 85px;
+    display: inline-block;
+    font-size: 18px;
+}
+
+.details_value {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.view-memo-pcomments div{
+    background-color: #e7e7eb;
+    min-height: 478px;
+}
+
+.view-memo-pcomments p{
+    font-weight: 600;
+}
+.view-memo-pcomments span{
+    font-style: italic;
+    opacity: 0.6;
+}
+
+.view-memo-signIn-prompt{
+    text-align: center;
+    display: inline-block;
+    margin: 0 auto;
+    color: rgb(158, 158, 158);
+}
+
+.view-memo-signIn-prompt span{
+    /* color: red; */
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.view-memo-signIn-prompt span:hover{
+    color: rgb(84, 83, 83);
+}
